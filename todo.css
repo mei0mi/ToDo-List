@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    margin: 2cm;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+    color: white;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+
+form button:hover {
+    background: transparent;
+    color: white;
+}
+
+.todo-list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 40%;
+}
+
+.todo-task-div{
+    margin: 0.5rem;
+    background: white ;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s ease;
+}
+
+.todo-task-div li {
+    flex: 1;
+    padding: 0rem 0.5rem;
+}
+
+.check-btn,
+.delete-btn {
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    padding: 3mm;
+    cursor: pointer;
+}
+
+.check-btn {
+    background-color: lightcyan;
+}
+
+.check-btn:hover {
+    background: transparent;
+    color: rgb(2, 95, 95);
+}
+
+.delete-btn {
+    background-color: lightcoral;
+}
+
+.delete-btn:hover {
+    background: transparent;
+    color:lightcoral;
+}
+
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fall {
+    transform: translateX(20rem);
+    opacity: 0;
+}
+
+.todo-options {
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+.selected {
+    margin: 1rem;
+    position: relative;
+}
+
+select {
+    color: black;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.selected::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+
+}
+
+
